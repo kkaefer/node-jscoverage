@@ -47,7 +47,7 @@ static int string_ends_with(const char * s, const char * suffix) {
 }
 
 static enum FileType get_file_type(const char * file) {
-  if (string_ends_with(file, ".js")) {
+  if (string_ends_with(file, ".js") || string_ends_with(file, ".bones")) {
     return FILE_TYPE_JS;
   }
   else if (string_ends_with(file, ".html") || string_ends_with(file, ".htm")) {
